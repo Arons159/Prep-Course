@@ -4,7 +4,7 @@ function mayuscula(nombre) {
   //La función recibe un nombre y debe devolver el mismo que recibe pero con su primer letra en mayúscula
   //ej: Recibe "mario" ----> Devuelve "Mario"
   //Tu código:
-  return nombre[0].toUpperCase() + nombre.slice(1)
+  return nombre[0].toUpperCase() + nombre.slice(1);
 }
 
 function invocarCallback(cb) {
@@ -25,9 +25,9 @@ function sumarArray(numeros, cb) {
   // Pasa el resultado a `cb`
   // No es necesario devolver nada
   //Tu código:
-  var sumaTotal = numeros.reduce(function(acc, curr){
+  var sumaTotal = numeros.reduce(function (acc, curr) {
     return acc + curr;
-  },0);
+  }, 0);
   cb(sumaTotal);
 }
 
@@ -35,8 +35,8 @@ function forEach(array, cb) {
   // Itera sobre la matriz "array" y pasa los valores al callback uno por uno
   // Pista: Estarás invocando a `cb` varias veces (una por cada valor en la matriz)
   //Tu código:
-  for(var i = 0; i<array.length; i++){
-    cb(array[i])
+  for (var i = 0; i < array.length; i++) {
+    cb(array[i]);
   }
 }
 
@@ -45,8 +45,8 @@ function map(array, cb) {
   // Itera sobre cada valor en "array", pásalo a `cb` y luego ubicar el valor devuelto por `cb` en un nuevo array
   // El nuevo array debe tener la misma longitud que el array del argumento
   //Tu código:
-  var nuevoArray = array.map(function(el){
-      return cb(el);
+  var nuevoArray = array.map(function (el) {
+    return cb(el);
   });
   return nuevoArray;
 }
@@ -56,9 +56,9 @@ function filter(array) {
   //Devolver un nuevo array con los elementos que cumplen la condición
   //Tu código:
   var nuevoArray = [];
-  for(let i = 0; i<array.length; i++){
-    if (array[i][0] === 'a') {
-      nuevoArray.push(array[i])
+  for (let i = 0; i < array.length; i++) {
+    if (array[i][0] === "a") {
+      nuevoArray.push(array[i]);
     }
   }
   return nuevoArray;
@@ -74,5 +74,5 @@ module.exports = {
   sumarArray,
   forEach,
   map,
-  filter
+  filter,
 };
